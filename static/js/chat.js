@@ -1,5 +1,6 @@
 // Calling backend with email and creating index, next getting chatlist chatlist 
-const BASE_URL = "http://127.0.0.1:9632"
+const BASE_URL = "http://127.0.0.1:8000"
+
 email = document.getElementById("email").value;
 var indexData = new FormData();
 indexData.append("email", email);
