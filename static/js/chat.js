@@ -285,10 +285,6 @@ function openChat(chat_id) {
     var div = document.getElementById(chat_id)
     var p = div.querySelector("p")
     p.style.display = "none"
-
-
-
-
 }
 
 // Create messages in chat history 
