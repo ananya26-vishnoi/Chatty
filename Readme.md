@@ -198,3 +198,10 @@ Here we receive a message from the frontend using the socket connection. We get 
 
 ![Alt text](Readme_images/consumer_3.png)
 ![Alt text](Readme_images/consumer_4.png)
+
+
+# Video Demo
+
+Here is a video demo of the project: 
+[![Watch the video](Readme_images/video.webm)](Readme_images/video.webm)
+
