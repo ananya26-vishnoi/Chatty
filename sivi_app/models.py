@@ -8,6 +8,10 @@ class User(models.Model):
     otp_verified = models.BooleanField(default=False)
     connections = models.JSONField(default=list,null=True,blank=True)
     socket_code = models.CharField(max_length=100)
+    gender = models.CharField(max_length=100)
+    country = models.CharField(max_length=100)
+    phone = models.CharField(max_length=100)
+    is_online = models.BooleanField(default=False)
 
 
 class ChatHistory(models.Model):

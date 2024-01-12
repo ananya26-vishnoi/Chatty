@@ -131,7 +131,8 @@ class Chat:
                     temp_dict = {
                         'id': temp_user.id,
                         'username': temp_user.username,
-                        'email': temp_user.email
+                        'email': temp_user.email,
+                        'is_online': temp_user.is_online,
                     }
                     final_list.append(temp_dict)
                 return Response({'connections': final_list}, status=status.HTTP_200_OK)

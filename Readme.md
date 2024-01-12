@@ -98,6 +98,11 @@ Now we press on the friend we want to chat with and we can start chatting with t
 
 ![Alt text](Readme_images/chatting.png)
 
+### User Online
+
+If user is online you will see their name in green color
+![Alt text](Readme_images/online.png)
+
 ### Sending Message
 
 When you send a message it will be shown on your screen and saved in the database for future use.

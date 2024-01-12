@@ -1,5 +1,5 @@
 // Calling backend with email and creating index, next getting chatlist chatlist 
-const BASE_URL = "http://127.0.0.1:8000"
+const BASE_URL = "http://127.0.0.1:9632"
 
 email = document.getElementById("email").value;
 var indexData = new FormData();
@@ -100,6 +100,9 @@ function make_chat_list(chat_data) {
         var folder_file_name = document.createElement("div");
         folder_file_name.className = "folder_file_name";
         folder_file_name.innerHTML = chat_data[i]["username"];
+        if (chat_data[i]["is_online"] == true){
+            folder_file_name.style.color = "green"
+        }
         var p = document.createElement("p");
         p.className = "new_message"
 

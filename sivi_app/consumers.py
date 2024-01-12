@@ -9,6 +9,7 @@ from asgiref.sync import sync_to_async
 def update_socket_code(email,socket_code):
     user = User.objects.get(email = email)
     user.socket_code = socket_code
+    user.is_online = True
     user.save()
 
 @sync_to_async
@@ -22,6 +23,12 @@ def add_to_history(message,reciever_id,email):
     receiver = User.objects.get(id =reciever_id )
     ChatHistory.objects.create(chat = message,sender = sender, receiver = receiver)
 
+@sync_to_async
+def make_offline(socket_code):
+    user = User.objects.get(socket_code = socket_code)
+    user.is_online = False
+    user.save()
+    
 @sync_to_async
 def get_short_name(email):
     user = User.objects.get(email=email)
@@ -58,6 +65,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
             self.room_group_name,
             self.channel_name
         )
+        await make_offline(self.room_group_name)
         print("Frontend Disconnected")
 
     async def receive(self, text_data):
